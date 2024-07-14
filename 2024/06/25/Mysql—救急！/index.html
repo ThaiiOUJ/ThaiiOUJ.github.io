@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Mysql | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Mysql"><meta name="application-name" content="Mysql"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Mysql"><meta property="og:url" content="http://example.com/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/index.html"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="临时抱佛脚系列 离考试就一晚上了  如何创建数据库1create database 数据库名;  进入数据库1use 数据库名  如何创建列表1234create  table 表名 (	列名 数据类型&amp;#123;char,varchar,int.....&amp;#125; 允许值 主键(primay k"><meta property="og:locale" content="en"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714221411.jpg"><meta property="article:author" content="John Doe"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714221411.jpg"><meta name="description" content="临时抱佛脚系列 离考试就一晚上了  如何创建数据库1create database 数据库名;  进入数据库1use 数据库名  如何创建列表1234create  table 表名 (	列名 数据类型&amp;#123;char,varchar,int.....&amp;#125; 允许值 主键(primay k"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715001327.jpg"><link rel="canonical" href="http://example.com/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"Author: John Doe","link":"Link: ","source":"Source: Hexo","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.","copySuccess":"Copy success, copy and reprint please mark the address of this article"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Hexo',
+  title: 'Mysql',
+  postAI: '',
+  pageFillDescription: '临时抱佛脚系列, 如何创建数据库, 进入数据库, 如何创建列表, 建完后如何查看表的结构通过 desc table_name, 如何给列表插入数据, 示例, 由于上面创列表时列名打错了示例修改列名, 如何查看列表内容, 如何改表的结构, 修改 curriculum 表的课程名称列使之为非空：, 修改 grade 表的分数列使其数据类型为 decimal(52)：, 为 student_info 表添加一个名为备注的数据列：, 修改表的结构语法和知识点, 1. ALTER TABLE 语法, 2. ALTER TABLE 的操作选项, 3. ALTER TABLE 的常用选项, 主键问题临时抱佛脚系列离考试就一晚上了如何创建数据库数据库名进入数据库数据库名如何创建列表表名列名数据类型允许值主键以此类推建完后如何查看表的结构通过例如我表名表名如何给列表插入数据列表名列名郗桥川男衡阳市东风路号任逸帆男东阳市八一北路号钟白女长岭市五一路号毕士杰男滨海市洞庭大道号肖海洋男长岛市解放路号余皓男南山市红旗路号林洛雪女东方市南京路号顾一心女滨江市新建路号示例由于上面创列表时列名打错了示例修改列名专业家庭住址学号姓名性别出生日期家庭住址郗桥川男衡阳市东风路号任逸帆男东阳市八一北路号钟白女长岭市五一路号毕士杰男滨海市洞庭大道号肖海洋男长岛市解放路号余皓男南山市红旗路号林洛雪女东方市南京路号顾一心女滨江市新建路号如何查看列表内容表名如何改表的结构修改表的课程名称列使之为非空课程名称修改表的分数列使其数据类型为分数为表添加一个名为备注的数据列备注修改表的结构语法和知识点修改表的结构涉及到使用命令语法复制代码的操作选项修改列的定义包括数据类型是否允许值默认值等修改列的数据类型和属性但不能更改列名修改列的名称和定义包括数据类型是否允许值默认值等向表中添加新列家庭住址添加名为家庭住址的新列删除表中的列专业删除名为专业的列的常用选项将新列放置在表的第一个位置将新列放置在指定列后面级联操作修改或删除主表中的行会同步修改或删除相关联的从表中的行限制操作确保在执行时不会产生级联效应主键问题学号课程编号这是一个复合主键的定义意味着学号课程编号这两个列的组合将作为表的主键主键的作用是唯一标识表中的每一行数据复合主键意味着表中的每个组合学号课程编号必须唯一但是单独的学号或课程编号可以重复学号学号这是一个外键约束的定义它指定了学号列作为外键其参考了表中的学号列外键的作用是建立表之间的关系在这种情况下学号列将会引用表中已经存在的学号值确保在插入或更新数据时学号列的值必须存在于表中课程编号课程编号这也是一个外键约束的定义它指定了课程编号列作为外键其参考了表中的课程编号列类似于前面的外键定义这个约束确保了在插入或更新数据时课程编号列的值必须存在于表中总结这段代码片段的作用是在当前表中定义一个复合主键由学号和课程编号组成建立两个外键约束确保学号和课程编号列的值分别在和表中有对应的记录从而维护数据的完整性和一致性主专用视频内嵌代码贴在这',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-15 00:10:50',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714215547.png"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Hexo</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> Newest Comments</span></div><div class="aside-list"><span>loading...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">July 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">June 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">转载</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">Mysql</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-06-24T16:00:00.000Z" title="Created 2024-06-25 00:00:00">2024-06-25</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-07-14T16:10:50.270Z" title="Updated 2024-07-15 00:10:50">2024-07-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为M87星球"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>M87星球</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714221411.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/"><header><h1 id="CrawlerTitle" itemprop="name headline">Mysql</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Ah Nan</span><time itemprop="dateCreated datePublished" datetime="2024-06-24T16:00:00.000Z" title="Created 2024-06-25 00:00:00">2024-06-25</time><time itemprop="dateCreated datePublished" datetime="2024-07-14T16:10:50.270Z" title="Updated 2024-07-15 00:10:50">2024-07-15</time></header><h1 id="临时抱佛脚系列"><a href="#临时抱佛脚系列" class="headerlink" title="临时抱佛脚系列"></a>临时抱佛脚系列</h1><blockquote>
+<p><strong>离考试就一晚上了</strong><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/Snipaste_2023-12-17_15-05-23.png"></p>
+</blockquote>
+<h3 id="如何创建数据库"><a href="#如何创建数据库" class="headerlink" title="如何创建数据库"></a>如何创建数据库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进入数据库"><a href="#进入数据库" class="headerlink" title="进入数据库"></a>进入数据库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何创建列表"><a href="#如何创建列表" class="headerlink" title="如何创建列表"></a>如何创建列表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create  table 表名 (</span><br><span class="line">	列名 数据类型&#123;char,varchar,int.....&#125; 允许值 主键(primay key),</span><br><span class="line">    以此类推;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/image-20240703020445222.png" alt="image-20240703020445222"></p>
+<h3 id="建完后如何查看表的结构通过-desc-table-name"><a href="#建完后如何查看表的结构通过-desc-table-name" class="headerlink" title="建完后如何查看表的结构通过 desc table_name;"></a>建完后如何查看表的结构通过 desc table_name;</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如我表名:student_info</span><br><span class="line">desc 表名;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/image-20240703021048689.png" alt="image-20240703021048689"></p>
+<h3 id="如何给列表插入数据"><a href="#如何给列表插入数据" class="headerlink" title="如何给列表插入数据"></a>如何给列表插入数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">inser into 列表名(列名)values</span><br><span class="line">(&#x27;0001&#x27;, &#x27;郗桥川&#x27;, &#x27;男&#x27;, &#x27;2010-10-01&#x27;, &#x27;衡阳市东风路77号&#x27;),</span><br><span class="line">(&#x27;0002&#x27;, &#x27;任逸帆&#x27;, &#x27;男&#x27;, &#x27;2008-12-09&#x27;, &#x27;东阳市八一北路33号&#x27;),</span><br><span class="line">(&#x27;0003&#x27;, &#x27;钟白&#x27;, &#x27;女&#x27;, &#x27;2005-06-12&#x27;, &#x27;长岭市五一路63号&#x27;),</span><br><span class="line">(&#x27;0004&#x27;, &#x27;毕士杰&#x27;, &#x27;男&#x27;, &#x27;2004-09-23&#x27;, &#x27;滨海市洞庭大道279号&#x27;),</span><br><span class="line">(&#x27;0005&#x27;, &#x27;肖海洋&#x27;, &#x27;男&#x27;, &#x27;2005-04-03&#x27;, &#x27;长岛市解放路27号&#x27;),</span><br><span class="line">(&#x27;0006&#x27;, &#x27;余皓&#x27;, &#x27;男&#x27;, &#x27;2007-11-10&#x27;, &#x27;南山市红旗路113号&#x27;),</span><br><span class="line">(&#x27;0007&#x27;, &#x27;林洛雪&#x27;, &#x27;女&#x27;, &#x27;2006-12-07&#x27;, &#x27;东方市南京路11号&#x27;),</span><br><span class="line">(&#x27;0008&#x27;, &#x27;顾一心&#x27;, &#x27;女&#x27;, &#x27;2007-12-24&#x27;, &#x27;滨江市新建路97号&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h4><h5 id="由于上面创列表时列名打错了示例修改列名"><a href="#由于上面创列表时列名打错了示例修改列名" class="headerlink" title="由于上面创列表时列名打错了示例修改列名:"></a>由于上面创列表时列名打错了示例修改列名:</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE student_info</span><br><span class="line">CHANGE COLUMN 专业 家庭住址 varchar(50);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">insert into student_info(学号,姓名,性别,出生日期,家庭住址) values</span><br><span class="line">(&#x27;0001&#x27;, &#x27;郗桥川&#x27;, &#x27;男&#x27;, &#x27;2010-10-01&#x27;, &#x27;衡阳市东风路77号&#x27;),</span><br><span class="line">(&#x27;0002&#x27;, &#x27;任逸帆&#x27;, &#x27;男&#x27;, &#x27;2008-12-09&#x27;, &#x27;东阳市八一北路33号&#x27;),</span><br><span class="line">(&#x27;0003&#x27;, &#x27;钟白&#x27;, &#x27;女&#x27;, &#x27;2005-06-12&#x27;, &#x27;长岭市五一路63号&#x27;),</span><br><span class="line">(&#x27;0004&#x27;, &#x27;毕士杰&#x27;, &#x27;男&#x27;, &#x27;2004-09-23&#x27;, &#x27;滨海市洞庭大道279号&#x27;),</span><br><span class="line">(&#x27;0005&#x27;, &#x27;肖海洋&#x27;, &#x27;男&#x27;, &#x27;2005-04-03&#x27;, &#x27;长岛市解放路27号&#x27;),</span><br><span class="line">(&#x27;0006&#x27;, &#x27;余皓&#x27;, &#x27;男&#x27;, &#x27;2007-11-10&#x27;, &#x27;南山市红旗路113号&#x27;),</span><br><span class="line">(&#x27;0007&#x27;, &#x27;林洛雪&#x27;, &#x27;女&#x27;, &#x27;2006-12-07&#x27;, &#x27;东方市南京路11号&#x27;),</span><br><span class="line">(&#x27;0008&#x27;, &#x27;顾一心&#x27;, &#x27;女&#x27;, &#x27;2007-12-24&#x27;, &#x27;滨江市新建路97号&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何查看列表内容"><a href="#如何查看列表内容" class="headerlink" title="如何查看列表内容"></a>如何查看列表内容</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名;</span><br><span class="line">select * from grade;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/image-20240703022348862.png" alt="image-20240703022348862"></p>
+<h3 id="如何改表的结构"><a href="#如何改表的结构" class="headerlink" title="如何改表的结构"></a>如何改表的结构</h3><h4 id="修改-curriculum-表的”课程名称”列，使之为非空："><a href="#修改-curriculum-表的”课程名称”列，使之为非空：" class="headerlink" title="修改 curriculum 表的”课程名称”列，使之为非空："></a>修改 curriculum 表的”课程名称”列，使之为非空：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE curriculum</span><br><span class="line">MODIFY COLUMN 课程名称 VARCHAR(50) NOT NULL;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改-grade-表的”分数”列，使其数据类型为-decimal-5-2-："><a href="#修改-grade-表的”分数”列，使其数据类型为-decimal-5-2-：" class="headerlink" title="修改 grade 表的”分数”列，使其数据类型为 decimal(5,2)："></a>修改 grade 表的”分数”列，使其数据类型为 decimal(5,2)：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE grade</span><br><span class="line">MODIFY COLUMN 分数 DECIMAL(5,2);</span><br></pre></td></tr></table></figure>
+
+<h4 id="为-student-info-表添加一个名为”备注”的数据列："><a href="#为-student-info-表添加一个名为”备注”的数据列：" class="headerlink" title="为 student_info 表添加一个名为”备注”的数据列："></a>为 student_info 表添加一个名为”备注”的数据列：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE student_info</span><br><span class="line">ADD COLUMN 备注 VARCHAR(50);</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改表的结构语法和知识点"><a href="#修改表的结构语法和知识点" class="headerlink" title="修改表的结构语法和知识点"></a>修改表的结构语法和知识点</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name</span><br><span class="line">    [ALTER | MODIFY | CHANGE | ADD | DROP] [COLUMN] column_name column_definition</span><br><span class="line">    [FIRST | AFTER existing_column]</span><br><span class="line">    [CASCADE | RESTRICT];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>修改表的结构涉及到使用 <code>ALTER TABLE</code> 命令</p>
+<h3 id="1-ALTER-TABLE-语法"><a href="#1-ALTER-TABLE-语法" class="headerlink" title="1. ALTER TABLE 语法"></a>1. ALTER TABLE 语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sql复制代码ALTER TABLE table_name</span><br><span class="line">    [ALTER | MODIFY | CHANGE | ADD | DROP] [COLUMN] column_name column_definition</span><br><span class="line">    [FIRST | AFTER existing_column]</span><br><span class="line">    [CASCADE | RESTRICT];</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-ALTER-TABLE-的操作选项"><a href="#2-ALTER-TABLE-的操作选项" class="headerlink" title="2. ALTER TABLE 的操作选项"></a>2. ALTER TABLE 的操作选项</h3><ul>
+<li><p><strong>ALTER COLUMN</strong>: 修改列的定义，包括数据类型、是否允许 NULL 值、默认值等。</p>
+</li>
+<li><p><strong>MODIFY COLUMN</strong>: 修改列的数据类型和属性，但不能更改列名。</p>
+</li>
+<li><p><strong>CHANGE COLUMN</strong>: 修改列的名称和定义（包括数据类型、是否允许 NULL 值、默认值等）。</p>
+</li>
+<li><p><strong>ADD COLUMN</strong>: 向表中添加新列。</p>
+</li>
+<li><pre><code class="mysql">ALTER TABLE student_info
+    ADD COLUMN 家庭住址 varchar(100);  -- 添加名为家庭住址的新列
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- **DROP COLUMN**: 删除表中的列。</span><br><span class="line"></span><br><span class="line">- ```mysql</span><br><span class="line">  ALTER TABLE student_info</span><br><span class="line">      DROP COLUMN 专业;  -- 删除名为专业的列</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<h3 id="3-ALTER-TABLE-的常用选项"><a href="#3-ALTER-TABLE-的常用选项" class="headerlink" title="3. ALTER TABLE 的常用选项"></a>3. ALTER TABLE 的常用选项</h3><ul>
+<li><strong>FIRST</strong>: 将新列放置在表的第一个位置。</li>
+<li><strong>AFTER existing_column</strong>: 将新列放置在指定列后面。</li>
+<li><strong>CASCADE</strong>: 级联操作，修改或删除主表中的行，会同步修改或删除相关联的从表中的行。</li>
+<li><strong>RESTRICT</strong>: 限制操作，确保在执行 <code>ALTER TABLE</code> 时不会产生级联效应。</li>
+</ul>
+<h3 id="主键问题"><a href="#主键问题" class="headerlink" title="主键问题:"></a>主键问题:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">PRIMARY KEY (学号, 课程编号):</span><br><span class="line"></span><br><span class="line">这是一个复合主键的定义。意味着 (学号, 课程编号) 这两个列的组合将作为表的主键。</span><br><span class="line">主键的作用是唯一标识表中的每一行数据。复合主键意味着表中的每个组合 (学号, 课程编号) 必须唯一，但是单独的 学号 或 课程编号 可以重复。</span><br><span class="line">FOREIGN KEY (学号) REFERENCES student_info(学号):</span><br><span class="line"></span><br><span class="line">这是一个外键约束的定义。它指定了 学号 列作为外键，其参考了 student_info 表中的 学号 列。</span><br><span class="line">外键的作用是建立表之间的关系。在这种情况下，学号 列将会引用 student_info 表中已经存在的 学号 值，确保在插入或更新数据时，学号 列的值必须存在于 student_info 表中。</span><br><span class="line">FOREIGN KEY (课程编号) REFERENCES curriculum(课程编号):</span><br><span class="line"></span><br><span class="line">这也是一个外键约束的定义。它指定了 课程编号 列作为外键，其参考了 curriculum 表中的 课程编号 列。</span><br><span class="line">类似于前面的外键定义，这个约束确保了在插入或更新数据时，课程编号 列的值必须存在于 curriculum 表中。</span><br><span class="line">总结</span><br><span class="line">这段代码片段的作用是：</span><br><span class="line"></span><br><span class="line">在当前表中定义一个复合主键，由 学号 和 课程编号 组成。</span><br><span class="line">建立两个外键约束，确保 学号 和 课程编号 列的值分别在 student_info 和 curriculum 表中有对应的记录，从而维护数据的完整性和一致性</span><br></pre></td></tr></table></figure>
+
+<div class="video-container">
+[up主专用，视频内嵌代码贴在这]
+</div>
+
+<style>
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714215547.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714215547.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">Ah Nan</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__reprint" title="该文章为转载文章，注意版权协议" href="http://example.com/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/">转载</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/')">Mysql</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Mysql&amp;url=http://example.com/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/&amp;pic=https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714221411.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/1689246719485.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/06/15/Git/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/git-workflow-1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Git小教学</div></div></a></div><div class="next-post pull-right"><a href="/2024/07/11/JavaScript/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/javascript-illustration.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">JavaScript</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714215547.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>Announcement</span></div><div class="announcement_content">Welcome to Ah Nan's blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E6%8A%B1%E4%BD%9B%E8%84%9A%E7%B3%BB%E5%88%97"><span class="toc-text">临时抱佛脚系列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">如何创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">进入数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%88%97%E8%A1%A8"><span class="toc-text">如何创建列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E5%AE%8C%E5%90%8E%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84%E9%80%9A%E8%BF%87-desc-table-name"><span class="toc-text">建完后如何查看表的结构通过 desc table_name;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%BB%99%E5%88%97%E8%A1%A8%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">如何给列表插入数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%B1%E4%BA%8E%E4%B8%8A%E9%9D%A2%E5%88%9B%E5%88%97%E8%A1%A8%E6%97%B6%E5%88%97%E5%90%8D%E6%89%93%E9%94%99%E4%BA%86%E7%A4%BA%E4%BE%8B%E4%BF%AE%E6%94%B9%E5%88%97%E5%90%8D"><span class="toc-text">由于上面创列表时列名打错了示例修改列名:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%88%97%E8%A1%A8%E5%86%85%E5%AE%B9"><span class="toc-text">如何查看列表内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%94%B9%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">如何改表的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-curriculum-%E8%A1%A8%E7%9A%84%E2%80%9D%E8%AF%BE%E7%A8%8B%E5%90%8D%E7%A7%B0%E2%80%9D%E5%88%97%EF%BC%8C%E4%BD%BF%E4%B9%8B%E4%B8%BA%E9%9D%9E%E7%A9%BA%EF%BC%9A"><span class="toc-text">修改 curriculum 表的”课程名称”列，使之为非空：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-grade-%E8%A1%A8%E7%9A%84%E2%80%9D%E5%88%86%E6%95%B0%E2%80%9D%E5%88%97%EF%BC%8C%E4%BD%BF%E5%85%B6%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%BA-decimal-5-2-%EF%BC%9A"><span class="toc-text">修改 grade 表的”分数”列，使其数据类型为 decimal(5,2)：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA-student-info-%E8%A1%A8%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E5%90%8D%E4%B8%BA%E2%80%9D%E5%A4%87%E6%B3%A8%E2%80%9D%E7%9A%84%E6%95%B0%E6%8D%AE%E5%88%97%EF%BC%9A"><span class="toc-text">为 student_info 表添加一个名为”备注”的数据列：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84%E8%AF%AD%E6%B3%95%E5%92%8C%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">修改表的结构语法和知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ALTER-TABLE-%E8%AF%AD%E6%B3%95"><span class="toc-text">1. ALTER TABLE 语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ALTER-TABLE-%E7%9A%84%E6%93%8D%E4%BD%9C%E9%80%89%E9%A1%B9"><span class="toc-text">2. ALTER TABLE 的操作选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ALTER-TABLE-%E7%9A%84%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9"><span class="toc-text">3. ALTER TABLE 的常用选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%94%AE%E9%97%AE%E9%A2%98"><span class="toc-text">主键问题:</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/07/14/odoo%E5%AE%8C%E6%88%90%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/" title="odoo开发练习-员工申请"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/1689246719485.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="odoo开发练习-员工申请"/></a><div class="content"><a class="title" href="/2024/07/14/odoo%E5%AE%8C%E6%88%90%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/" title="odoo开发练习-员工申请">odoo开发练习-员工申请</a><time datetime="2024-07-13T16:00:00.000Z" title="Created 2024-07-14 00:00:00">2024-07-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/11/JavaScript/" title="JavaScript"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/javascript-illustration.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript"/></a><div class="content"><a class="title" href="/2024/07/11/JavaScript/" title="JavaScript">JavaScript</a><time datetime="2024-07-10T16:00:00.000Z" title="Created 2024-07-11 00:00:00">2024-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/" title="Mysql"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714221411.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mysql"/></a><div class="content"><a class="title" href="/2024/06/25/Mysql%E2%80%94%E6%95%91%E6%80%A5%EF%BC%81/" title="Mysql">Mysql</a><time datetime="2024-06-24T16:00:00.000Z" title="Created 2024-06-25 00:00:00">2024-06-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/15/Git/" title="Git小教学"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ThaiiOUJ/PicGo@main/git-workflow-1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git小教学"/></a><div class="content"><a class="title" href="/2024/06/15/Git/" title="Git小教学">Git小教学</a><time datetime="2024-06-14T16:00:00.000Z" title="Created 2024-06-15 00:00:00">2024-06-15</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="John Doe" target="_blank">John Doe</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/ThaiiOUJ/PicGo/tree/main"></a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/" title="tag"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/" title="category"><div class="headline">Categories</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">Function</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="Display Mode"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>Display Mode</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://open.spotify.com/genre/section0JQ5IMCbQBLpbfi3jWJGUa&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 John Doe 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
